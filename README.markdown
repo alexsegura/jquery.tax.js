@@ -21,9 +21,9 @@ Then call the plugin with options.
 
 ```javascript
 $('fieldset.tax').tax({
-    inclusive: '.inclusive', 
-    exclusive: '.exclusive', 
-    rate: 19.6, 
-    decimals: 2
+    inclusive: '.inclusive', // Selector for the tax inclusive input
+    exclusive: '.exclusive', // Selector for the tax exclusive input
+    rate: 19.6,              // Tax rate
+    decimals: 2              // Number of decimals
 });
 ```
