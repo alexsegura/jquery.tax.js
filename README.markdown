@@ -11,10 +11,10 @@ Usage
 Text fields just need to be wrapped inside any element. 
 
 ```html
-    <fieldset class="tax">
-        <input type="text" class="inclusive" /> INCL.
-        <input type="text" class="exclusive" /> EXCL
-    </fieldset>
+<fieldset class="tax">
+    <input type="text" class="inclusive" /> INCL.
+    <input type="text" class="exclusive" /> EXCL
+</fieldset>
 ```
 
 Then call the plugin with options. 
