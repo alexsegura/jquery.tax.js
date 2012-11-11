@@ -3,6 +3,8 @@ JQuery Tax
 
 JQuery plugin to link together two text fields containing tax exclusive/inclusive data. 
 
+Linked fields will be updated as the user types. 
+
 Usage
 -----
 
