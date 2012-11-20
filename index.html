@@ -47,7 +47,14 @@
     rate: 19.6,              // Tax rate
     decimals: 2              // Number of decimals
 });</code></pre>
-
+		
+		<h3>Example</h3>
+		
+		<div id="example">
+    		<input type="text" class="inclusive" /> INCL.
+    		<input type="text" class="exclusive" /> EXCL
+		</div>
+		
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/alexsegura">alexsegura</a></p>
@@ -55,6 +62,15 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		$('#example').tax({
+    		    inclusive: '.inclusive', // Selector for the tax inclusive input
+    		    exclusive: '.exclusive', // Selector for the tax exclusive input
+    		    rate: 19.6,              // Tax rate
+    		    decimals: 2              // Number of decimals
+    		});
+        });
+    </script>
   </body>
 </html>
