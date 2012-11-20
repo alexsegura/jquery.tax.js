@@ -37,19 +37,20 @@
 		<h3>Usage</h3>
 
 		<pre>
-				<fieldset class="tax">
-				    <input type="text" class="inclusive" /> INCL.
-				    <input type="text" class="exclusive" /> EXCL
-				</fieldset>
+			<code>&lt;fieldset class="tax"&gt;
+				    &lt;input type="text" class="inclusive" /&gt; INCL.
+				    &lt;input type="text" class="exclusive" /&gt; EXCL
+				&lt;/fieldset&gt;
+			</code>
 		</pre>
 		
 		<pre>
-$('fieldset.tax').tax({
+<code>$('fieldset.tax').tax({
     inclusive: '.inclusive', // Selector for the tax inclusive input
     exclusive: '.exclusive', // Selector for the tax exclusive input
     rate: 19.6,              // Tax rate
     decimals: 2              // Number of decimals
-});
+});</code>
 		</pre>
 
       </section>
