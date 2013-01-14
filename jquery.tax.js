@@ -5,7 +5,11 @@
 		init: function(options) {
 			
 			options = $.extend({
-				decimals: 2
+				decimals: 2, 
+				round: function(value) {
+					return value;
+				}, 
+				autocomplete: true
 		    }, options);
 		
 			return this.each(function() {
@@ -13,15 +17,20 @@
 				var $inclusive = $(this).find(options.inclusive), 
 					$exclusive = $(this).find(options.exclusive);
 				
+				if (!options.autocomplete) {
+					$inclusive.attr('autocomplete', 'off');
+					$exclusive.attr('autocomplete', 'off');
+				}
+				
 				$inclusive.keyup(function() {
 					var multiplier = options.rate / 100, 
-						exclusive = ($(this).val() / (1 + multiplier));
+						exclusive = options.round.apply(this, [($(this).val() / (1 + multiplier))]);
 					$exclusive.val(exclusive.toFixed(options.decimals));
 				});
 				
 				$exclusive.keyup(function() {
 					var multiplier = options.rate / 100, 
-						inclusive = ($(this).val() * (1 + multiplier));
+						inclusive = options.round.apply(this, [($(this).val() * (1 + multiplier))]);
 					$inclusive.val(inclusive.toFixed(options.decimals));
 				});
 

@@ -26,6 +26,10 @@ $('fieldset.tax').tax({
     inclusive: '.inclusive', // Selector for the tax inclusive input
     exclusive: '.exclusive', // Selector for the tax exclusive input
     rate: 19.6,              // Tax rate
-    decimals: 2              // Number of decimals
+    decimals: 2,             // Number of decimals, 
+    autocomplete: true,      // Set to false to disable browser autocomplete
+    round: function(value) { // Custom function to round the value
+        return value;
+    }
 });
 ```
